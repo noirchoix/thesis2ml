@@ -1,0 +1,9 @@
+{
+  "name": "thesis2ml-chemistry-workbench",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev:frontend": "npm --prefix frontend run dev",
+    "dev:backend": "cd backend && uvicorn app.main:app --reload --port 8000"
+  }
+}

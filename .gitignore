@@ -1,0 +1,9 @@
+backend/.env
+backend/data/
+backend/venv/
+frontend/.env
+frontend/node_modules/
+frontend/.svelte-kit/
+frontend/build/
+__pycache__/
+*.pyc
