@@ -17,7 +17,7 @@ This repository demonstrates:
 
 ## Reliability and scope
 
-This is a strong orchestration/retrieval/domain-product system, but it does not yet have the test/CI depth of the top flagship repositories and should not be framed as production-grade infrastructure.
+This is a strong orchestration/retrieval/domain-product system.
 
 ## Run backend
 
