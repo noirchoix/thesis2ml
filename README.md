@@ -1,29 +1,23 @@
-# Thesis2ML Chemistry
+# Thesis2ML Chemistry Workbench
 
-Chemistry-first workbench for converting dormant theses into practical ML, RAG, product, and commercialization roadmaps.
+A chemistry-focused document-to-opportunity workbench that persists theses and chunk embeddings, combines vector and lexical retrieval, and orchestrates sequential specialist stages for thesis extraction, chemistry/ML mapping, product strategy, and commercialization. Provider fallbacks preserve deterministic function when external models are unavailable.
 
-The app is built around specialist-agent orchestration rather than one large prompt:
+## Engineering profile
 
-1. Thesis extraction agent
-2. Chemistry ML mapper
-3. Product strategist
-4. Research commercialization analyst
+This repository demonstrates:
 
-It uses a LightRAG-inspired pipeline at production-MVP scale: document extraction, paragraph-aware chunking, embeddings, hybrid vector/keyword retrieval, traceable context, and structured JSON outputs.
+- SQLite persistence for documents, chunks, embeddings, and analysis runs
+- Paragraph-aware chunking with overlap
+- Voyage embeddings with Gemini fallback and deterministic hash fallback
+- Hybrid retrieval combining cosine-vector and keyword scores with traceable components
+- Sequential specialist-agent stages with structured JSON contracts
+- Deterministic heuristic fallbacks on provider failure
+- Explicit distinction between thesis-native evidence and public benchmark context
+- FastAPI + SvelteKit domain workbench
 
-## AI stack
+## Reliability and scope
 
-Generation:
-
-- DeepSeek `deepseek-chat`
-- Gemini `gemini-2.5-flash`
-
-Embeddings:
-
-- VoyageAI `voyage-3-large`
-- Gemini `text-embedding-004`
-
-If keys are missing, the backend falls back to local deterministic embeddings and heuristic JSON so the portfolio demo still runs.
+This is a strong orchestration/retrieval/domain-product system, but it does not yet have the test/CI depth of the top flagship repositories and should not be framed as production-grade infrastructure.
 
 ## Run backend
 
@@ -84,4 +78,3 @@ This is not a generic thesis summarizer. It is a chemistry-specific applied AI w
 - planning baseline ML experiments
 - proposing buildable science products
 - identifying commercialization paths and blockers
-
